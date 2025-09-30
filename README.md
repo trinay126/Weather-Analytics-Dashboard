@@ -110,7 +110,8 @@ Here are some of the DAX measures used in the Weather Dashboard:
         AQI <= 200, "Limit prolonged outdoor exertion",
         AQI <= 300, "Avoid outdoor activity if possible",
         "Stay indoors, wear mask if outside"
-    )
+    ).
+
 **These are some of the DAX Measures i used in the dashboard.
 
 
@@ -163,3 +164,4 @@ Here are some of the DAX measures used in the Weather Dashboard:
 🎓 Aspiring Data Analyst | Excel, Power BI  
 
 ---
+
