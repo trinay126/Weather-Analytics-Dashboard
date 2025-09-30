@@ -44,26 +44,19 @@ The data model follows a **star schema design**:
 - **Locations ↔ Current** (1-to-1)  
 - **Locations ↔ Forecast_Day** (1-to-many)  
 - **Locations ↔ Forecast_Hour** (1-to-many)  
+## 🔍 ERD (Entity Relationship Diagram)
 
-🔍 ERD (Entity Relationship Diagram)
+```mermaid
+flowchart TD
+    LOCATIONS[Locations] -->|1-to-many| FORECAST_DAY[Forecast_Day]
+    LOCATIONS[Locations] -->|1-to-1| CURRENT[Current]
+    LOCATIONS[Locations] -->|1-to-many| FORECAST_HOUR[Forecast_Hour]
+   
 
-        +--------------+
-        |  Locations   |
-        |--------------|
-        | location.name|
-        +------+-------+
-               | (1)
-               | 
-   +-----------+------------+
-   |           |            |
-(∞)|           |        (∞)|
-Forecast_Day   |         Forecast_Hour
-               |  
-               |
-               |
-               +
-              (1)
-            Current
+```  
+
+
+
 
 ## 🧮 DAX Measures
 
@@ -112,8 +105,8 @@ Here are some of the DAX measures used in the Weather Dashboard:
         "Stay indoors, wear mask if outside"
     ).
 
-**These are some of the DAX Measures i used in the dashboard.
 
+-------------------------------------------------------------------------------------------------------------------------
 
 
 
@@ -164,4 +157,5 @@ Here are some of the DAX measures used in the Weather Dashboard:
 🎓 Aspiring Data Analyst | Excel, Power BI  
 
 ---
+
 
